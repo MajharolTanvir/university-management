@@ -1,6 +1,8 @@
-import express, { Application, Request, Response } from 'express'
+import express, { Application } from 'express'
+
 import cors from 'cors'
-import usersRoute from './app/modules/users/user.route'
+import globalErrorHandler from './app/middlewares/globalErrorHandler'
+import { UserRoutes } from './app/modules/users/user.route'
 
 const app: Application = express()
 
@@ -10,10 +12,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 //Application route
-app.use('/api/v1/users/', usersRoute)
+app.use('/api/v1/users/', UserRoutes)
 
-app.get('/', async (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+//Testing
+// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+//   Promise.reject(new Error('Unhandled Promise Rejection'))
+// })
+
+//Global error handler
+app.use(globalErrorHandler)
 
 export default app
