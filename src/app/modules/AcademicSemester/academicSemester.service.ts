@@ -3,7 +3,10 @@ import ApiError from '../../../errors/ApiError';
 import { paginationHelper } from '../../../helper/paginationHelper';
 import { GenericResponseType } from '../../../interfaces/common';
 import { PaginationOptionsType } from '../../../interfaces/paginationType';
-import { academicSemesterTitleCodeMapper } from './academicSemester.constant';
+import {
+  academicSemesterSearchableFields,
+  academicSemesterTitleCodeMapper,
+} from './academicSemester.constant';
 import {
   AcademicSemesterFiltersType,
   AcademicSemesterType,
@@ -26,9 +29,8 @@ const getAllSemester = async (
   filters: AcademicSemesterFiltersType,
   paginationOptions: PaginationOptionsType
 ): Promise<GenericResponseType<AcademicSemesterType[]>> => {
-  const { searchTerm } = filters;
+  const { searchTerm, ...filtersData } = filters;
 
-  const academicSemesterSearchableFields = ['title', 'code', 'year'];
   const andConditions = [];
   if (searchTerm) {
     andConditions.push({
@@ -66,6 +68,14 @@ const getAllSemester = async (
   //     ],
   //   },
   // ];
+
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => ({
+        [field]: value,
+      })),
+    });
+  }
 
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions);
