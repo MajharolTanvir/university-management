@@ -1,0 +1,15 @@
+Fri Jun 09 2023, 15:40:26 [WS] => error 🚀 globalErrorHandler ~ [
+  {
+    "code": "custom",
+    "message": "Ether both title and code should be provided or neither",
+    "path": []
+  }
+]
+Fri Jun 09 2023, 15:44:48 [WS] => error 🚀 globalErrorHandler ~ [
+  {
+    "code": "custom",
+    "message": "Ether both title and code should be provided or neither",
+    "path": []
+  }
+]
+Fri Jun 09 2023, 15:44:57 [WS] => error 🚀 globalErrorHandler ~ Invalid semester code
