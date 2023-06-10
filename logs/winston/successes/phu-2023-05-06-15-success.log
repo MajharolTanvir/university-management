@@ -1,0 +1,14 @@
+{
+  message: '🛢️ Database is connected successfully',
+  level: 'info',
+  service: 'user-service',
+  label: 'Tanvir',
+  timestamp: '2023-06-05T09:14:18.266Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'Tanvir',
+  timestamp: '2023-06-05T09:14:18.283Z'
+}
