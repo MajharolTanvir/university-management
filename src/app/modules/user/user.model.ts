@@ -19,6 +19,9 @@ const userSchema = new Schema<UserTypes>(
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   }
 );
 
