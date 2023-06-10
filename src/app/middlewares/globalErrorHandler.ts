@@ -5,13 +5,17 @@ import config from '../../config';
 import { IGenericErrorMessage } from '../../interfaces/error';
 import { handleValidationError } from '../../errors/handleValidationError';
 import ApiError from '../../errors/ApiError';
-import { ErrorRequestHandler } from 'express';
+import { ErrorRequestHandler, Request, Response } from 'express';
 import { errorLogger } from '../../shared/logger';
 import { ZodError } from 'zod';
 import handleZodError from '../../errors/handleZodError';
 import handleCastError from '../../errors/handleCastError';
 
-const globalErrorHandler: ErrorRequestHandler = (err, req, res) => {
+const globalErrorHandler: ErrorRequestHandler = (
+  err,
+  req: Request,
+  res: Response
+) => {
   config.env === 'Development'
     ? console.log('🚀 globalErrorHandler ~', err)
     : errorLogger.error('🚀 globalErrorHandler ~', err);
