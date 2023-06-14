@@ -43,32 +43,6 @@ const getAllSemester = async (
     });
   }
 
-  //andConditions is used to shortcut in upper code
-  // const andConditions = [
-  //   {
-  //     $or: [
-  //       {
-  //         title: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //       {
-  //         code: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //       {
-  //         year: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       }
-  //     ],
-  //   },
-  // ];
-
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
