@@ -1,6 +1,5 @@
 import { Model, Types } from 'mongoose';
-import { AcademicFacultyType } from '../AcademicFaculty/academicFaculty.interface';
-import { AcademicDepartmentType } from '../AcademicDepartment/academicDepartment.interface';
+import { ManagementDepartmentType } from '../ManagementDepartment/ManagementDepartment.interface';
 
 type UserName = {
   firstName: string;
@@ -19,11 +18,9 @@ export type AdminType = {
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB=' | 'AB-' | 'O+' | 'O-';
   presentAddress: string;
   permanentAddress: string;
-  managementDepartment: Types.ObjectId | AcademicDepartmentType;
-  designation?: 'Professor' | 'Lecturer';
+  managementDepartment: Types.ObjectId | ManagementDepartmentType;
+  designation?: string;
   profileImage?: string;
-  academicDepartment: Types.ObjectId | AcademicDepartmentType;
-  academicFaculty: Types.ObjectId | AcademicFacultyType;
 };
 
 export type AdminModel = Model<AdminType, Record<string, unknown>>;
@@ -34,6 +31,7 @@ export type adminFiltersType = {
   bloodGroups?: string;
   email?: string;
   contactNo?: string;
+  designation?: string;
   emergencyContactNo?: string;
   managementDepartment?: string;
 };

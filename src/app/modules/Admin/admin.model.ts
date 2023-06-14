@@ -1,8 +1,8 @@
 import { Schema, model } from 'mongoose';
-import { FacultyModel, FacultyType } from './faculty.interface';
-import { bloodGroup, gender } from './faculty.constant';
+import { AdminModel, AdminType } from './admin.interface';
+import { bloodGroup, gender } from './admin.constant';
 
-export const FacultySchema = new Schema<FacultyType, FacultyModel>(
+export const AdminSchema = new Schema<AdminType, AdminModel>(
   {
     id: {
       type: String,
@@ -58,6 +58,10 @@ export const FacultySchema = new Schema<FacultyType, FacultyModel>(
       type: String,
       enum: bloodGroup,
     },
+    managementDepartment: {
+      type: String,
+      required: true,
+    },
     designation: {
       type: String,
       required: true,
@@ -65,16 +69,6 @@ export const FacultySchema = new Schema<FacultyType, FacultyModel>(
     profileImage: {
       type: String,
       // required: true,
-    },
-    academicDepartment: {
-      type: Schema.Types.ObjectId,
-      ref: 'AcademicDepartment',
-      required: true,
-    },
-    academicFaculty: {
-      type: Schema.Types.ObjectId,
-      ref: 'AcademicFaculty',
-      required: true,
     },
   },
   {
@@ -85,7 +79,4 @@ export const FacultySchema = new Schema<FacultyType, FacultyModel>(
   }
 );
 
-export const Faculty = model<FacultyType, FacultyModel>(
-  'Faculty',
-  FacultySchema
-);
+export const Admin = model<AdminType, AdminModel>('Admin', AdminSchema);

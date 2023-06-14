@@ -19,7 +19,7 @@ export type FacultyType = {
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB=' | 'AB-' | 'O+' | 'O-';
   presentAddress: string;
   permanentAddress: string;
-  designation?: 'Professor' | 'Lecturer';
+  designation?: string;
   profileImage?: string;
   academicDepartment: Types.ObjectId | AcademicDepartmentType;
   academicFaculty: Types.ObjectId | AcademicFacultyType;

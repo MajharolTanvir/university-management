@@ -67,7 +67,7 @@ const getAllFaculty = async (
 };
 
 const getSingleFaculty = async (id: string): Promise<FacultyType | null> => {
-  const result = await Faculty.findById(id)
+  const result = await Faculty.findOne({ id })
     .populate('academicDepartment')
     .populate('academicFaculty');
   return result;

@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import { bloodGroup, gender } from '../Student/student.constant';
-import { designation } from '../Faculty/faculty.constant';
 
 const createStudentZodSchema = z.object({
   body: z.object({
@@ -137,7 +136,7 @@ const createFacultyZodSchema = z.object({
       permanentAddress: z.string({
         required_error: 'Date of birth is required',
       }),
-      designation: z.enum([...designation] as [string, ...string[]], {
+      designation: z.string({
         required_error: 'Designation is required',
       }),
       profile: z
@@ -151,7 +150,66 @@ const createFacultyZodSchema = z.object({
   }),
 });
 
+const createAdminZodSchema = z.object({
+  body: z.object({
+    password: z.string().optional(),
+    admin: z.object({
+      name: z.object({
+        firstName: z.string({
+          required_error: 'First name is required',
+        }),
+        middleName: z
+          .string({
+            required_error: 'Middle name is required',
+          })
+          .optional(),
+        lastName: z.string({
+          required_error: 'Last name is required',
+        }),
+      }),
+      gender: z.enum([...gender] as [string, ...string[]], {
+        required_error: 'Gender is required',
+      }),
+      dateOfBirth: z.string({
+        required_error: 'Date of birth is required',
+      }),
+      email: z
+        .string({
+          required_error: 'Email is required',
+        })
+        .email(),
+      contactNo: z.string({
+        required_error: 'Contact no is required',
+      }),
+      emergencyContactNo: z.string({
+        required_error: 'Emergency number is required',
+      }),
+      bloodGroup: z.enum([...bloodGroup] as [string, ...string[]], {
+        required_error: 'Blood group is required',
+      }),
+      presentAddress: z.string({
+        required_error: 'Date of birth is required',
+      }),
+      permanentAddress: z.string({
+        required_error: 'Date of birth is required',
+      }),
+      managementDepartment: z.string({
+        required_error: 'Management department is required',
+      }),
+      designation: z.string({
+        required_error: 'Designation is required',
+      }),
+      profile: z
+        .string({
+          required_error: 'Profile is required',
+        })
+        .optional(),
+    }),
+  }),
+});
+
 export const UserValidation = {
   createStudentZodSchema,
   createFacultyZodSchema,
+  createAdminZodSchema,
 };

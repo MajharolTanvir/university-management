@@ -1,0 +1,5 @@
+Wed Jun 14 2023, 21:48:26 [WS] => error 🚀 globalErrorHandler ~ Faculty validation failed: academicFaculty: Path `academicFaculty` is required., academicDepartment: Path `academicDepartment` is required.
+Wed Jun 14 2023, 21:51:8 [WS] => error 🚀 globalErrorHandler ~ Faculty validation failed: academicFaculty: Path `academicFaculty` is required., academicDepartment: Path `academicDepartment` is required.
+Wed Jun 14 2023, 21:52:46 [WS] => error 🚀 globalErrorHandler ~ Faculty validation failed: academicFaculty: Path `academicFaculty` is required., academicDepartment: Path `academicDepartment` is required.
+Wed Jun 14 2023, 21:53:53 [WS] => error 🚀 globalErrorHandler ~ Faculty validation failed: academicFaculty: Path `academicFaculty` is required., academicDepartment: Path `academicDepartment` is required.
+Wed Jun 14 2023, 21:56:24 [WS] => error 🚀 globalErrorHandler ~ Faculty validation failed: academicFaculty: Path `academicFaculty` is required., academicDepartment: Path `academicDepartment` is required.
