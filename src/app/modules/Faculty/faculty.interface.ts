@@ -1,5 +1,6 @@
 import { Model, Types } from 'mongoose';
 import { AcademicFacultyType } from '../AcademicFaculty/academicFaculty.interface';
+import { AcademicDepartmentType } from '../AcademicDepartment/academicDepartment.interface';
 
 type UserName = {
   firstName: string;
@@ -20,7 +21,7 @@ export type FacultyType = {
   permanentAddress: string;
   designation?: 'Professor' | 'Lecturer';
   profileImage?: string;
-  academicDepartment: Types.ObjectId | AcademicFacultyType;
+  academicDepartment: Types.ObjectId | AcademicDepartmentType;
   academicFaculty: Types.ObjectId | AcademicFacultyType;
 };
 
