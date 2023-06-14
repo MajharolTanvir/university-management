@@ -1,12 +1,13 @@
 import { Model, Types } from 'mongoose';
 import { StudentType } from '../Student/student.interface';
+import { FacultyType } from '../Faculty/faculty.interface';
 
 export type UserTypes = {
   id: string | null;
   role: string;
   password: string;
   student?: Types.ObjectId | StudentType;
-  // faculty?: Types.ObjectId | FacultyType;
+  faculty?: Types.ObjectId | FacultyType;
   // admin?: Types.ObjectId | AdminType;
 };
 

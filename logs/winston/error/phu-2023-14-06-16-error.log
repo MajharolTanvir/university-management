@@ -1,0 +1,44 @@
+Wed Jun 14 2023, 16:11:35 [WS] => error 🚀 globalErrorHandler ~ Expected double-quoted property name in JSON at position 635
+Wed Jun 14 2023, 16:13:4 [WS] => error 🚀 globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "body",
+      "faculty"
+    ],
+    "message": "Required"
+  }
+]
+Wed Jun 14 2023, 16:14:15 [WS] => error 🚀 globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "body",
+      "name"
+    ],
+    "message": "Required"
+  }
+]
+Wed Jun 14 2023, 16:16:19 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.faculties index: id_1 dup key: { id: "F-00001" }
+Wed Jun 14 2023, 16:17:27 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.faculties index: id_1 dup key: { id: "F-00001" }
+Wed Jun 14 2023, 16:17:57 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.faculties index: id_1 dup key: { id: "F-00001" }
+Wed Jun 14 2023, 16:34:38 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `academicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
+Wed Jun 14 2023, 16:34:45 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `academicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
+Wed Jun 14 2023, 16:39:46 [WS] => error 🚀 globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "body",
+      "name"
+    ],
+    "message": "Required"
+  }
+]
+Wed Jun 14 2023, 16:40:56 [WS] => error 🚀 globalErrorHandler ~ Student not found
+Wed Jun 14 2023, 16:42:50 [WS] => error 🚀 globalErrorHandler ~ Student not found

@@ -13,24 +13,24 @@
     "contactNo": "User_4",
     "emergencyContact": "013298198217",
     "presentAddress": "CTG",
-    "permanenetAddress" : "CTG",
+    "permanenetAddress": "CTG",
     "academicFaculty": "648333fc0321119de97972d5",
     "academicDepartment": "6484069e4a3498df53bb8243",
     "academicSemester": "6482a8b0e234c5b0a979acd8",
     "guardian": {
-        "fatherName": "MD.ABBU",
-        "fatherOccupation": "Retired Teacher",
-        "fatherContact": "012309309409",
-        "motherName" : "Mrs, Ammu",
-        "motherOccupation" : "Housewife",
-        "motherContactNo": "0193279898",
-        "address": "CTG"
+      "fatherName": "MD.ABBU",
+      "fatherOccupation": "Retired Teacher",
+      "fatherContact": "012309309409",
+      "motherName": "Mrs, Ammu",
+      "motherOccupation": "Housewife",
+      "motherContactNo": "0193279898",
+      "address": "CTG"
     },
     "localGuardian": {
-        "name": "Zahid Hasan",
-        "occupation": "Service Holder",
-        "contactNo": "039120912",
-        "address": "Dhaka" 
+      "name": "Zahid Hasan",
+      "occupation": "Service Holder",
+      "contactNo": "039120912",
+      "address": "Dhaka"
     }
   }
 }
