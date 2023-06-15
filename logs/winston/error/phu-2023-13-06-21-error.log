@@ -1,0 +1,2 @@
+Tue Jun 13 2023, 21:41:4 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `Student` because it is not in your schema. Set the `strictPopulate` option to false to override.
+Tue Jun 13 2023, 21:41:22 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.students index: id_1 dup key: { id: "250100001" }

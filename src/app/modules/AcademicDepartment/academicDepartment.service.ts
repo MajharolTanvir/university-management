@@ -13,7 +13,9 @@ import { AcademicFacultyType } from '../AcademicFaculty/academicFaculty.interfac
 const createDepartment = async (
   payload: AcademicDepartmentType
 ): Promise<AcademicDepartmentType | null> => {
-  const result = await AcademicDepartment.create(payload);
+  const result = (await AcademicDepartment.create(payload)).populate(
+    'academicFaculty'
+  );
   return result;
 };
 
@@ -76,7 +78,9 @@ const getAllDepartments = async (
 const getSingleDepartment = async (
   id: string
 ): Promise<AcademicFacultyType | null> => {
-  const result = await AcademicDepartment.findById(id);
+  const result = await AcademicDepartment.findById(id).populate(
+    'academicFaculty'
+  );
   return result;
 };
 
@@ -88,7 +92,7 @@ const updateDepartment = async (
     { _id: id },
     payload,
     { new: true }
-  );
+  ).populate('academicFaculty');
 
   return result;
 };

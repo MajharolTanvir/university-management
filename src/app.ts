@@ -4,6 +4,7 @@ import cors from 'cors';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes/routes';
 import httpStatus from 'http-status';
+// import { generateFacultyId, generateStudentId } from './app/modules/user/user.utils';
 const app: Application = express();
 
 app.use(cors());
@@ -28,5 +29,13 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
+
+// const academicSemester = {
+//   code: '01',
+//   year: '2025',
+// };
+
+// const testId = generateFacultyId();
+// console.log(testId);
 
 export default app;

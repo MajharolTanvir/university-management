@@ -1,0 +1,9 @@
+Wed Jun 14 2023, 22:3:51 [WS] => error 🚀 globalErrorHandler ~ Faculty validation failed: academicFaculty: Path `academicFaculty` is required., academicDepartment: Path `academicDepartment` is required.
+Wed Jun 14 2023, 22:5:59 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.admins index: email_1 dup key: { email: "user@gmail.com" }
+Wed Jun 14 2023, 22:22:23 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `academicDepartment` because it is not in your schema. Set the `strictPopulate` option to false to override.
+Wed Jun 14 2023, 22:22:34 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `academicDepartment` because it is not in your schema. Set the `strictPopulate` option to false to override.
+Wed Jun 14 2023, 22:27:43 [WS] => error 🚀 globalErrorHandler ~ Cast to ObjectId failed for value "A-00001" (type string) at path "_id" for model "Admin"
+Wed Jun 14 2023, 22:28:51 [WS] => error 🚀 globalErrorHandler ~ Cast to ObjectId failed for value "A-00001" (type string) at path "_id" for model "Admin"
+Wed Jun 14 2023, 22:29:26 [WS] => error 🚀 globalErrorHandler ~ Parameter "filter" to findOne() must be an object, got "A-00001" (type string)
+Wed Jun 14 2023, 22:30:1 [WS] => error 🚀 globalErrorHandler ~ Cast to ObjectId failed for value "{ id: 'A-00001' }" (type Object) at path "_id" for model "Admin"
+Wed Jun 14 2023, 22:31:36 [WS] => error 🚀 globalErrorHandler ~ Cast to ObjectId failed for value "A-00001" (type string) at path "_id" for model "Admin"
