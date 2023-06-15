@@ -8,7 +8,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = __importDefault(require("../../config"));
 const handleValidationError_1 = require("../../errors/handleValidationError");
 const ApiError_1 = __importDefault(require("../../errors/ApiError"));
-const logger_1 = require("../../shared/logger");
 const zod_1 = require("zod");
 const handleZodError_1 = __importDefault(require("../../errors/handleZodError"));
 const handleCastError_1 = __importDefault(require("../../errors/handleCastError"));
@@ -17,7 +16,7 @@ const globalErrorHandler = (err, req, res,
 next) => {
     config_1.default.env === 'Development'
         ? console.log('🚀 globalErrorHandler ~', err)
-        : logger_1.errorLogger.error('🚀 globalErrorHandler ~', err);
+        : console.log('🚀 globalErrorHandler ~', err);
     let statusCode = 500;
     let message = 'Something went wrong !';
     let errorMessages = [];
