@@ -4,7 +4,7 @@ import { User } from './user.model';
 export const findLastStudentId = async (): Promise<string | undefined> => {
   const lastStudent = await User.findOne(
     {
-      role: 'Student',
+      role: 'student',
     },
     { id: 1, _id: 0 }
   )

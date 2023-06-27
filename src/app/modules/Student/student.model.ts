@@ -34,13 +34,13 @@ export const StudentSchema = new Schema<StudentType, StudentModel>(
     },
     email: {
       type: String,
-      required: true,
       unique: true,
+      required: true,
     },
     contactNo: {
       type: String,
-      required: true,
       unique: true,
+      required: true,
     },
     emergencyContactNo: {
       type: String,

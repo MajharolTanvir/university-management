@@ -1,13 +1,16 @@
 import express, { Application, NextFunction, Request, Response } from 'express';
-
 import cors from 'cors';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes/routes';
 import httpStatus from 'http-status';
-// import { generateFacultyId, generateStudentId } from './app/modules/user/user.utils';
+import cookieParser from 'cookie-parser'
+
 const app: Application = express();
 
+// Cors
 app.use(cors());
+// Cookie parser
+app.use(cookieParser());
 //parse
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

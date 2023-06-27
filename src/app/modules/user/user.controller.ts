@@ -7,7 +7,7 @@ import sendResponse from '../../../shared/sendResponse';
 const createStudent = catchAsync(async (req: Request, res: Response) => {
   const { student, ...userData } = req.body;
   const result = await UserService.createStudent(student, userData);
-
+  
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

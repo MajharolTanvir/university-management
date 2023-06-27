@@ -15,7 +15,7 @@ const getAllStudents = async (
 ): Promise<GenericResponse<StudentType[]>> => {
   const { searchTerm, ...filtersData } = filters;
 
-  const andConditions = [];
+  const andConditions = []; 
   if (searchTerm) {
     andConditions.push({
       $or: studentSearchableFields.map(field => ({
