@@ -1,7 +1,7 @@
 {
   "name": "university-management",
   "version": "1.0.0",
-  "description": "A mid to high range enterprice level university management project",
+  "description": "A mid to high range enterprise level university management project",
   "main": "src/server.ts",
   "author": "Majharul Tanvir",
   "license": "MIT",

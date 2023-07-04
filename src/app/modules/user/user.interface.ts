@@ -9,6 +9,7 @@ export type UserTypes = {
   role: string;
   password: string;
   needsPasswordChange: true | false;
+  passwordChangedAt?: Date,
   student?: Types.ObjectId | StudentType;
   faculty?: Types.ObjectId | FacultyType;
   admin?: Types.ObjectId | AdminType;

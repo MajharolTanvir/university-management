@@ -1,9 +1,0 @@
-Wed Jun 14 2023, 20:2:28 [WS] => error 🚀 globalErrorHandler ~ ManagementDepartment validation failed: id: Path `id` is required.
-Wed Jun 14 2023, 20:3:40 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.managementdepartments index: id_1 dup key: { id: null }
-Wed Jun 14 2023, 20:3:53 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.managementdepartments index: id_1 dup key: { id: null }
-Wed Jun 14 2023, 20:5:26 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.managementdepartments index: id_1 dup key: { id: null }
-Wed Jun 14 2023, 20:7:1 [WS] => error 🚀 globalErrorHandler ~ ManagementDepartment validation failed: title: Path `title` is required.
-Wed Jun 14 2023, 20:8:0 [WS] => error 🚀 globalErrorHandler ~ ManagementDepartment validation failed: title: Path `title` is required.
-Wed Jun 14 2023, 20:8:4 [WS] => error 🚀 globalErrorHandler ~ ManagementDepartment validation failed: title: Path `title` is required.
-Wed Jun 14 2023, 20:8:58 [WS] => error 🚀 globalErrorHandler ~ ManagementDepartment validation failed: title: Path `title` is required.
-Wed Jun 14 2023, 20:9:15 [WS] => error 🚀 globalErrorHandler ~ ManagementDepartment validation failed: title: Path `title` is required.

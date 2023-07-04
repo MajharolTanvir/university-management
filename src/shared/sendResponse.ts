@@ -9,7 +9,7 @@ type ApiResponse<T> = {
     limit?: number;
     total?: number;
   };
-  data?: T | null;
+  data?: T | null| undefined | void;
 };
 
 const sendResponse = <T>(res: Response, data: ApiResponse<T>): void => {
@@ -18,7 +18,7 @@ const sendResponse = <T>(res: Response, data: ApiResponse<T>): void => {
     success: data.success,
     message: data.message || null,
     meta: data.meta || null || undefined,
-    data: data.data || null,
+    data: data.data || null || undefined,
   };
   res.status(data.statusCode).json(responseData);
 };

@@ -1,1 +1,0 @@
-Tue Jun 13 2023, 22:0:51 [WS] => error 🚀 globalErrorHandler ~ E11000 duplicate key error collection: university-management.students index: id_1 dup key: { id: "250100001" }

@@ -1,6 +1,0 @@
-Wed Jun 14 2023, 15:4:6 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `AcademicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
-Wed Jun 14 2023, 15:4:44 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `AcademicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
-Wed Jun 14 2023, 15:6:7 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `AcademicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
-Wed Jun 14 2023, 15:6:25 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `AcademicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
-Wed Jun 14 2023, 15:6:32 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `AcademicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
-Wed Jun 14 2023, 15:7:34 [WS] => error 🚀 globalErrorHandler ~ Cannot populate path `AcademicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.

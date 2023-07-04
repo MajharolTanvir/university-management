@@ -1,2 +1,0 @@
-Fri Jun 09 2023, 14:45:31 [WS] => error 🚀 globalErrorHandler ~ Cast to ObjectId failed for value "6482a8a8e234c5b0a979" (type string) at path "_id" for model "AcademicSemester"
-Fri Jun 09 2023, 14:46:44 [WS] => error 🚀 globalErrorHandler ~ Cast to ObjectId failed for value "6482a8a8e234c5b0a979" (type string) at path "_id" for model "AcademicSemester"

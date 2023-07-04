@@ -15,4 +15,11 @@ export type RefreshTokenResponseType = {
   accessToken: string;
 };
 
+
 export type LoginUserModel = Model<LoginUserType, Record<string, unknown>>;
+
+
+export type changePasswordType = {
+  oldPassword: string,
+  newPassword: string
+}

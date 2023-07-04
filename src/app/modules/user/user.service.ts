@@ -31,7 +31,7 @@ const createStudent = async (
 
   const academicSemesters = await AcademicSemester.findById(
     student.academicSemester
-  );
+  ).lean();
 
   // Generate student id
 
