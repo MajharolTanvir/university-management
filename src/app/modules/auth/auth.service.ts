@@ -134,7 +134,6 @@ const changePassword = async (
   // const isUserExist = await user.isUserExist(userData?.userId);
 
   const isUserExist = await User.findOne({ id: userData?.userId }).select('+password')
-  console.log(isUserExist)
 
   if (!isUserExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
