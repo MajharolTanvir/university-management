@@ -23,7 +23,7 @@ router.get('/:id', auth(
   ENUM_USER_ROLE.STUDENT
 ), StudentsController.getSingleStudent);
 
-router.delete('/:id', auth(ENUM_USER_ROLE.SUPER_ADMIN), StudentsController.deleteStudent);
+router.delete('/:id', auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN), StudentsController.deleteStudent);
 
 router.patch(
   '/:id',
