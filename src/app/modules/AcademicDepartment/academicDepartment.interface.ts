@@ -15,3 +15,10 @@ export type AcademicDepartmentFiltersType = {
   searchTerm?: string;
   academicFaculty?: Types.ObjectId;
 };
+
+
+export type IAcademicDepartmentType = {
+  id: string;
+  title: string;
+  academicFacultyId: string;
+};
