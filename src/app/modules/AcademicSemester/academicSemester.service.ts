@@ -8,6 +8,7 @@ import {
   academicSemesterTitleCodeMapper,
 } from './academicSemester.constant';
 import {
+  AcademicSemesterEvent,
   AcademicSemesterFiltersType,
   AcademicSemesterType,
 } from './academicSemester.interface';
@@ -110,10 +111,48 @@ const deleteAcademicSemester = async (
   return result;
 };
 
+const createSemesterEvent = async (
+  payload: AcademicSemesterEvent
+): Promise<void> => {
+  await AcademicSemester.create({
+    title: payload.title,
+    code: payload.code,
+    year: payload.year,
+    startMonth: payload.startMonth,
+    endMonth: payload.endMonth,
+    syncId: payload.id,
+  });
+};
+
+const updateSemesterEvent = async (
+  payload: AcademicSemesterEvent
+): Promise<void> => {
+  await AcademicSemester.findOneAndUpdate(
+    { syncId: payload.id },
+    {
+      $set: {
+        title: payload.title,
+        code: payload.code,
+        year: payload.year,
+        startMonth: payload.startMonth,
+        endMonth: payload.endMonth,
+        syncId: payload.id,
+      },
+    }
+  );
+};
+
+const deleteSemesterEvent = async (payload: string): Promise<void> => {
+  await AcademicSemester.findOneAndDelete({ syncId: payload });
+};
+
 export const AcademicSemesterService = {
   createSemester,
   getAllSemester,
   getSingleSemester,
   updateSemester,
   deleteAcademicSemester,
+  createSemesterEvent,
+  updateSemesterEvent,
+  deleteSemesterEvent,
 };

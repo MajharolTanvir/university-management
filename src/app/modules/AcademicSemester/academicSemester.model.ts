@@ -22,7 +22,7 @@ const academicSemesterSchema = new Schema<
       enum: academicSemesterTitles,
     },
     year: {
-      type: String,
+      type: Number,
       required: true,
     },
     code: {
@@ -39,7 +39,7 @@ const academicSemesterSchema = new Schema<
       type: String,
       required: true,
       enum: academicSemesterMonths,
-    },
+    }
   },
   {
     timestamps: true,
