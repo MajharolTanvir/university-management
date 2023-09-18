@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import catchAsync from '../../../shared/catchAsync';
-import { AcademicFacultyService } from './academicFaculty.service';
+import { AcademicFacultyService } from './academicFaculty.services';
 import httpStatus from 'http-status';
 import sendResponse from '../../../shared/sendResponse';
 import pick from '../../../shared/pick';

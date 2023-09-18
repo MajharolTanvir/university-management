@@ -7,6 +7,12 @@ export type AcademicFacultyType = {
 export type AcademicFacultyModel = Model<
   AcademicFacultyType,
   Record<string, unknown>
->;
+  >;
+
+  export type AcademicFacultyEventType = {
+    title: string;
+    id: string
+  };
+
 
 export type AcademicFacultyFiltersType = { searchTerm?: string };

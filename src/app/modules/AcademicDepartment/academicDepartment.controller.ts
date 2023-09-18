@@ -1,7 +1,7 @@
 import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { AcademicDepartmentService } from './academicDepartment.service';
+import { AcademicDepartmentService } from './academicDepartment.services';
 import { Request, Response } from 'express';
 import { AcademicDepartmentType } from './academicDepartment.interface';
 import pick from '../../../shared/pick';

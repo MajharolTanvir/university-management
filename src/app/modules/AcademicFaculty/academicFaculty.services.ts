@@ -4,6 +4,7 @@ import { GenericResponse } from '../../../interfaces/common';
 import { PaginationOptionsType } from '../../../interfaces/paginationType';
 import { academicFacultySearchableFields } from './academicFaculty.constant';
 import {
+  AcademicFacultyEventType,
   AcademicFacultyFiltersType,
   AcademicFacultyType,
 } from './academicFaculty.interface';
@@ -96,10 +97,40 @@ const deleteFaculty = async (
   return result;
 };
 
+const createFacultyEvent = async (
+  payload: AcademicFacultyEventType
+): Promise<void> => {
+  await AcademicFaculty.create({
+    title: payload.title,
+  });
+};
+
+const updateFacultyEvent = async (
+  payload: AcademicFacultyEventType
+): Promise<void> => {
+  await AcademicFaculty.findOneAndUpdate(
+    { syncId: payload.id },
+    {
+      $set: { title: payload.title, syncId: payload.id },
+    }
+  );
+};
+
+const deleteFacultyEvent = async (
+  payload: AcademicFacultyEventType
+): Promise<void> => {
+  await AcademicFaculty.deleteOne({
+    syncId: payload,
+  });
+};
+
 export const AcademicFacultyService = {
   createFaculty,
   getAllFaculties,
   getSingleFaculty,
   updateFaculty,
   deleteFaculty,
+  createFacultyEvent,
+  updateFacultyEvent,
+  deleteFacultyEvent,
 };

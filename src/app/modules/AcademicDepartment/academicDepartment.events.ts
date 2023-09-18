@@ -4,7 +4,7 @@ import {
   EVENT_ACADEMIC_DEPARTMENT_DELETED,
   EVENT_ACADEMIC_DEPARTMENT_UPDATED,
 } from './academicDepartment.constants';
-import { AcademicDepartmentService } from './academicDepartment.service';
+import { AcademicDepartmentService } from './academicDepartment.services';
 
 const initAcademicDepartmentEvents = () => {
   RedisClient.subscribe(

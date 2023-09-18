@@ -4,7 +4,7 @@ import {
   EVENT_ACADEMIC_SEMESTER_DELETED,
   EVENT_ACADEMIC_SEMESTER_UPDATED,
 } from './academicSemester.constant';
-import { AcademicSemesterService } from './academicSemester.service';
+import { AcademicSemesterService } from './academicSemester.services';
 
 const initAcademicSemesterEvents = () => {
   RedisClient.subscribe(EVENT_ACADEMIC_SEMESTER_CREATED, async (e: string) => {
