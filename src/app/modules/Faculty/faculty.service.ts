@@ -6,10 +6,14 @@ import { GenericResponse } from '../../../interfaces/common';
 import { PaginationOptionsType } from '../../../interfaces/paginationType';
 import httpStatus from 'http-status';
 import { FacultyType, facultyFiltersType } from './faculty.interface';
-import { facultySearchableFields } from './faculty.constant';
+import {
+  EVENT_FACULTY_UPDATED,
+  facultySearchableFields,
+} from './faculty.constant';
 import { Faculty } from './faculty.model';
 import { User } from '../user/user.model';
 import mongoose from 'mongoose';
+import { RedisClient } from '../../../shared/redis';
 
 const getAllFaculty = async (
   filters: facultyFiltersType,
@@ -97,6 +101,11 @@ const updateFaculty = async (
   const result = await Faculty.findOneAndUpdate({ id }, updatedStudentData, {
     new: true,
   });
+
+  if (result) {
+    await RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
+  }
+
   return result;
 };
 

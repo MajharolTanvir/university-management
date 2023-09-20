@@ -5,10 +5,11 @@ import { paginationHelper } from '../../../helper/paginationHelper';
 import { GenericResponse } from '../../../interfaces/common';
 import { PaginationOptionsType } from '../../../interfaces/paginationType';
 import { StudentType, studentFiltersType } from './student.interface';
-import { studentSearchableFields } from './student.constant';
+import { EVENT_STUDENT_UPDATED, studentSearchableFields } from './student.constant';
 import { Student } from './student.model';
 import httpStatus from 'http-status';
 import { User } from '../user/user.model';
+import { RedisClient } from '../../../shared/redis';
 
 const getAllStudents = async (
   filters: studentFiltersType,
@@ -114,6 +115,11 @@ const updateStudent = async (
   const result = await Student.findOneAndUpdate({ id }, updatedStudentData, {
     new: true,
   });
+
+    if (result) {
+      await RedisClient.publish(EVENT_STUDENT_UPDATED, JSON.stringify(result));
+    }
+  
   return result;
 };
 
