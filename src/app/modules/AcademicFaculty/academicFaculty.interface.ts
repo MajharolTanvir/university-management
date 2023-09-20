@@ -2,6 +2,7 @@ import { Model } from 'mongoose';
 
 export type AcademicFacultyType = {
   title: string;
+  syncId: string
 };
 
 export type AcademicFacultyModel = Model<

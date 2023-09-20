@@ -35,6 +35,7 @@ const getAllFaculties = async (
     });
   }
 
+
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -102,6 +103,7 @@ const createFacultyEvent = async (
 ): Promise<void> => {
   await AcademicFaculty.create({
     title: payload.title,
+    syncId: payload.id
   });
 };
 

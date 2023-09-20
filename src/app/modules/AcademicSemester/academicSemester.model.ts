@@ -39,7 +39,11 @@ const academicSemesterSchema = new Schema<
       type: String,
       required: true,
       enum: academicSemesterMonths,
-    }
+    },
+    syncId: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

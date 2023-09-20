@@ -23,6 +23,7 @@ export type AcademicSemesterType = {
   code: AcademicSemesterCodes;
   startMonth: AcademicSemesterMonths;
   endMonth: AcademicSemesterMonths;
+  syncId: string
 };
 
 export type AcademicSemesterModel = Model<AcademicSemesterType>;

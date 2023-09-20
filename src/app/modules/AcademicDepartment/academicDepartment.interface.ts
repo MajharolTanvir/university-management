@@ -4,6 +4,7 @@ import { AcademicFacultyType } from '../AcademicFaculty/academicFaculty.interfac
 export type AcademicDepartmentType = {
   title: string;
   academicFaculty: Types.ObjectId | AcademicFacultyType;
+  syncId: string;
 };
 
 export type AcademicDepartmentModel = Model<
@@ -15,7 +16,6 @@ export type AcademicDepartmentFiltersType = {
   searchTerm?: string;
   academicFaculty?: Types.ObjectId;
 };
-
 
 export type IAcademicDepartmentType = {
   id: string;
