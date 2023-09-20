@@ -9,7 +9,7 @@ import config from '../../../config';
 const loginUser = catchAsync(async (req: Request, res: Response) => {
   const { ...loginData } = req.body;
   const result = await AuthService.loginAuth(loginData);
-  const { refreshToken, ...others } = result
+  const { refreshToken} = result
 
   //Set refresh token into cookie
   const cookieOptions = {
@@ -23,7 +23,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Login successfully',
-    data: others,
+    data: result,
   });
 });
 
